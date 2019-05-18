@@ -1,0 +1,796 @@
+/* Theme name: Equalso
+ *Version: 1.0
+ */
+body
+	margin: 0
+	font-family: 'Source Sans Pro', sans-serif
+	font-size: 17px
+	p
+		line-height: 30px
+
+.flex
+	display: flex
+	align-items: center
+
+$rose: #DD4267
+
+a:hover
+	text-decoration: none
+
+*:focus
+	outline: none
+
+img
+	max-width: 100%
+
+header
+	padding: 24px 0
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+
+	.right
+		text-align: right
+
+		.start
+			display: inline-block
+			width: 143px
+			height: 46px
+			line-height: 46px
+			text-align: center
+			border: 1px solid $rose
+			color: $rose
+			font-weight: 700
+			border-radius: 7px
+			font-size: 14px
+
+			&:hover
+				text-decoration: none
+
+	.menu
+		text-align: center
+		ul
+			padding: 0
+			margin: 0
+			list-style: none
+
+			li
+				display: inline-block
+				margin: 0 14px
+
+				a
+					color: $rose
+					font-size: 14px
+					font-family: Source Sans Pro
+					font-weight: 700
+					text-transform: uppercase
+
+					&:hover
+						text-decoration: none
+
+
+.main-banner
+	background: url(img/main.svg) no-repeat center center
+	background-size: cover
+
+	h1
+		font-weight: 600
+		font-size: 60px
+		line-height: 58px
+		margin: 0 0 20px 0
+
+	.subtitle
+		font-size: 21px
+
+	.style1
+		font-weight: 600
+
+	.style2
+		font-family: 'Vollkorn', serif
+		font-weight: 600
+		font-style: italic
+
+	.style3
+		font-weight: 900
+
+
+	.text
+		padding: 290px 0 173px 0
+		text-align: center
+
+.home-slider
+	padding: 135px 0
+	background: #F9F9F9
+	text-align: center
+	.item
+		padding: 0 95px
+	h2
+		font-size: 32px
+		font-weight: 600
+		margin: 0 0 24px 0
+		color: #B4B4B4
+
+	p
+		font-size: 17px
+		margin: 0
+		color: #B4B4B4
+
+	.slick-active
+		h2
+			color: $rose
+
+		p
+			color: #000
+
+.mosaic
+	padding: 126px 0 0 0
+	.item
+		margin-bottom: 100px
+		&.odd
+			.inner
+				padding-left: 28px
+
+		&.even
+			.inner
+				padding-right: 28px
+
+		h2
+			font-weight: 600
+			font-size: 32px
+			margin: 0 0 23px 0
+
+		h3
+			font-weight: 600
+			font-size: 24px
+
+		p
+			font-size: 24px
+
+.letswork
+	text-align: center
+	a
+		display: inline-block
+		font-size: 28px
+		font-weight: 600
+		padding-right: 30px
+		background: url(img/arrow.svg) no-repeat right center
+		background-size: 20px
+		color: #000
+
+	.divider
+		height: 1px
+		width: 67px
+		background: #707070
+		margin: 138px auto 70px auto
+
+	h2
+		max-width: 706px
+		margin: 0 auto
+		font-weight: 600px
+		font-size: 24px
+		line-height: 40px
+
+.contact
+	padding: 120px 0
+	.inner
+		padding: 92px 278px
+		background: #F7F7F7
+		text-align: center
+		border-radius: 20px
+
+		h2
+			font-size: 32px
+			font-weight: 600
+			margin: 0 0 24px 0
+
+		h3
+			font-size: 24px
+			font-weight: 600
+			margin: 0 0 24px 0
+
+		p
+			font-size: 17px
+			margin: 0
+
+		.red-btn
+			margin-top: 40px
+
+		.form
+			margin-top: 54px
+			.subj
+				text-align: left
+				margin-bottom: 20px
+				font-size: 14px
+
+				label
+					font-weight: 400
+
+				input
+					margin-right: 5px
+
+			input[type="submit"]
+				background: #DFDFDF
+				color: #000
+				font-size: 14px
+				width: 62px
+				height: 34px
+				border: none
+				border-radius: 5px
+
+
+input[type="text"],
+input[type="email"]
+	border: 1px solid rgba(112,112,112,0.3)
+	background: #fff
+	height: 43px
+	border-radius: 5px
+	padding: 0 18px
+
+textarea
+	border: 1px solid rgba(112,112,112,0.3)
+	background: #fff
+	border-radius: 5px
+	padding: 18px
+	resize: none
+
+input[type="text"],
+input[type="email"],
+textarea
+	font-size: 14px
+	width: 100%
+	margin-bottom: 20px
+	&::-webkit-input-placeholder
+		color: rgba(0, 0, 0, 0.5)
+		font-size: 14px
+	&::-moz-placeholder
+		color: rgba(0, 0, 0, 0.5)
+		font-size: 14px
+	&:-moz-placeholder
+		color: rgba(0, 0, 0, 0.5)
+		font-size: 14px
+	&:-ms-input-placeholder
+		color: rgba(0, 0, 0, 0.5)
+		font-size: 14px
+
+span.wpcf7-not-valid-tip
+	font-size: 14px !important
+
+.wpcf7-response-output
+	font-size: 14px
+	border: none !important
+	text-align: center
+	color: #000
+
+	&:after
+		content: " "
+		display: block
+		height: 11px
+		width: 124px
+		border-radius: 5px
+		background: $rose
+		margin: 14px auto
+
+.back
+	color: #fff
+	font-size: 14px
+	text-transform: uppercase
+	font-weight: 700
+	display: block
+
+	&:hover
+		color: #fff
+
+	img
+		margin-right: 3px
+		display: inline-block
+		vertical-align: middle
+
+.our-philosophy_page,
+.about-us_page,
+.blog_page
+	header
+		.right
+			.start
+				border: 1px solid #fff
+				color: #fff
+
+				&:hover
+					text-decoration: none
+
+		.menu
+			ul
+				li
+					a
+						color: #fff
+
+
+.blog_page
+	.blog-container
+		max-width: 877px
+		margin: 0 auto
+
+	.relevant-blogs
+		.relevant-hidden
+			display: none
+
+		.loadmore
+			background: #E4E4E4
+			color: #000
+			font-weight: 400
+			font-size: 13px
+			padding: 13px 20px
+			border-radius: 7px
+			margin-top: 20px
+			display: inline-block
+
+			&:hover
+				color: #000
+
+	.recent-blogs
+		padding: 60px 0
+		border: none
+
+		.item
+			margin: 0
+
+		.article
+			border-bottom: 1px solid rgba(112,112,112,0.25)
+			padding: 0 0 30px 0
+			margin-bottom: 30px
+
+			&:last-child
+				border: none
+
+			.excerpt
+				margin: 30px 0 0 0
+
+.single-container
+	max-width: 877px
+	margin: 0 auto
+
+.article-content
+	font-size: 17px
+	line-height: 30px
+	padding: 70px 0
+
+	p
+		margin: 0 0 40px 0
+
+	h1
+		font-size: 24px
+		font-weight: 600
+		margin: 0 0 30px 0
+
+	.quote
+		padding: 70px 0
+		font-size: 26px
+		font-weight: 600
+		font-style: italic
+		line-height: 40px
+		&:before
+			content: " "
+			display: block
+			width: 67px
+			height: 1px
+			background: #707070
+			margin: 0 auto 44px auto
+
+.recent-blogs,
+.relevant-blogs
+	border-bottom: 1px solid rgba(112,112,112,0.25)
+	padding: 0 0 55px 0
+	h2
+		font-size: 32px
+		font-weight: 600
+		margin: 0 0 40px 0
+
+	.item
+		background: url(img/blogbg.jpg) no-repeat center
+		background-size: cover
+		display: block
+		color: #fff
+		margin-bottom: 45px
+		border-radius: 20px
+
+		h3
+			font-size: 24px
+			line-height: 40px
+			font-weight: 600
+			margin: 0
+			padding: 90px 0
+			text-align: center
+
+.blogs-info
+	padding: 83px 0 
+	h2
+		font-size: 32px
+		font-weight: 600
+		margin: 0
+
+	h3
+		font-size: 24px
+		line-height: 40px
+		font-weight: 600
+		margin: 0
+		padding: 50px 0
+
+		&:after
+			content: " "
+			width: 20px
+			height: 20px
+			background: url(img/arrow.svg) no-repeat right center
+			background-size: 20px
+			display: inline-block
+			vertical-align: middle
+			margin-left: 10px
+
+		a
+			color: #000
+
+	p
+		margin: 0 0 40px 0
+
+.about-us_page
+	.main-banner
+		background: url(img/aboutbg.jpg) no-repeat center center
+		color: #fff
+
+	.about-intro
+		padding: 78px 0
+		background: #F7F7F7
+
+		.container
+			max-width: 997px
+			margin: 0 auto
+		h2
+			font-size: 32px
+			font-weight: 600
+			margin: 0 0 24px 0
+			text-align: center
+
+		p
+			font-size: 17px
+			margin: 0 0 30px 0
+
+	.meet
+		padding: 74px 0
+
+		h3
+			font-weight: 600
+			font-size: 24px
+			margin: 0 0 24px 0
+
+		p
+			font-size: 17px
+			margin: 0 0 30px 0
+
+	.about-bottom
+		padding: 136px 0 70px 0
+
+		.inner
+			padding: 70px 170px
+			background: url(img/aboutimg3.jpg) no-repeat center
+			background-size: cover
+			color: #fff
+			border-radius: 15px
+
+			h3
+				font-size: 28px
+				font-weight: 600
+				margin: 0 0 40px 0
+
+				a
+					color: #fff
+
+				&:after
+					content: " "
+					width: 20px
+					height: 20px
+					background: url(img/arrow.svg) no-repeat right center
+					background-size: 20px
+					display: inline-block
+					vertical-align: middle
+					margin-left: 10px
+
+			p
+				font-size: 17px
+				margin: 0 0 40px 0
+
+
+
+
+	.divider
+		height: 1px
+		width: 67px
+		background: #707070
+		margin: 70px auto
+
+.our-philosophy_page
+	.main-banner
+		background: url(img/bgrose.svg) no-repeat center center
+		color: #fff
+	.three
+		padding: 45px 0
+		.inner
+			padding: 50px
+			background: #F7F7F7
+			border-radius: 15px
+		h3
+			font-size: 32px
+			font-weight: 600
+			color: $rose
+			margin: 0 0 20px 0
+
+		p
+			font-size: 17px
+			margin: 0
+
+	.how-we-work
+		padding: 45px 0
+
+		h3
+			font-weight: 600
+			font-size: 24px
+			margin: 0 0 24px 0
+
+		p
+			font-size: 17px
+			margin: 0 0 30px 0
+
+	.linked-articles
+		padding: 45px 0
+
+		.row
+			margin: 0 -30px
+
+		.item
+			padding: 0 30px
+
+		.container
+			border-top: 1px solid rgba(112,112,112,0.25)
+			padding-top: 70px
+
+		h2
+			font-weight: 600
+			font-size: 32px
+			margin: 0 0 24px 0
+			padding-right: 50px
+			background: url(img/arrow.svg) no-repeat right center
+			background-size: 20px
+
+			a
+				font-weight: 600
+				font-size: 32px
+				color: #000
+
+		h3
+			font-weight: 600
+			font-size: 24px
+			margin: 0 0 24px 0
+
+		p
+			font-size: 17px
+			margin: 0 0 30px 0
+
+
+.subscribe-big
+	margin-bottom: 100px
+
+	.inner
+		padding: 64px 150px
+		background: #F7F7F7
+		border-radius: 20px
+	h2
+		font-size: 32px
+		font-weight: 600
+		margin: 0 0 30px 0
+		text-align: center
+	p
+		font-size: 17px
+		margin: 0 0 30px 0
+		text-align: center
+
+	form
+		max-width: 900px
+		margin: 0 auto
+
+		input
+			margin: 0
+
+	.red-btn
+		width: 100%
+		border: none
+		margin: 0
+		padding: 10px 20px
+
+	.wpcf7-response-output
+		font-size: 14px
+		border: none !important
+		text-align: center
+		color: #000
+
+		&:after
+			content: " "
+			display: block
+			height: 11px
+			width: 124px
+			border-radius: 5px
+			background: $rose
+			margin: 14px auto
+
+.section-title
+	font-size: 32px
+	font-weight: 600
+	margin: 0 0 70px 0
+	text-align: center
+
+#start-modal
+	background: $rose
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	color: #fff
+	text-align: center
+	z-index: 9999
+	display: none
+
+	input[type="email"]
+		color: #000
+
+	.close-modal
+		position: absolute
+		top: 25px
+		right: 45px
+		display: inline-block
+		width: 143px
+		height: 46px
+		line-height: 46px
+		text-align: center
+		border: 1px solid #fff
+		color: #fff
+		font-weight: 700
+		border-radius: 7px
+
+		&:hover
+			text-decoration: none
+
+	input[type="submit"]
+		background: #fff
+		color: $rose
+		font-size: 14px
+		width: 62px
+		height: 43px
+		border: none
+		width: 100%
+		border-radius: 5px
+
+	.congrats
+		clear: both
+		font-size: 17px
+		line-height: 30px
+
+	.container
+		max-width: 900px
+		height: 100%
+		margin: 0 auto
+		display: flex
+		align-items: center
+
+	h2
+		font-size: 32px
+		font-weight: 600
+		margin: 0 0 30px 0
+
+
+
+	.wpcf7-response-output
+		font-size: 14px
+		border: none !important
+		text-align: center
+		color: #fff
+
+		&:after
+			content: " "
+			display: block
+			height: 11px
+			width: 124px
+			border-radius: 5px
+			background: #fff
+			margin: 14px auto
+
+.red-btn
+	background: $rose
+	color: #fff
+	font-weight: 600
+	font-size: 16px
+	padding: 13px 20px
+	border-radius: 7px
+	margin-top: 20px
+	display: inline-block
+
+	&:hover
+		color: #fff
+.white-btn
+	background: #fff
+	color: $rose
+	font-weight: 600
+	font-size: 16px
+	padding: 13px 20px
+	border-radius: 7px
+	margin-top: 20px
+	display: inline-block
+
+	&:hover
+		color: #fff
+.footer-top
+	padding: 50px 0
+	.subscribe-box
+		padding: 30px
+		background: #F9F9F9
+		border-radius: 10px
+		color: #666666
+		font-size: 18px
+		input
+			margin-bottom: 0
+
+
+		h3
+			font-size: 18px
+			font-weight: 700
+			color: #666666
+			margin: 0 0 30px 0
+			text-transform: uppercase
+
+		p
+			margin: 0 0 20px 0
+
+		.red-btn
+			margin: 0
+			padding: 10px 20px
+			border: none
+
+	.inner
+		padding: 0 0 0 20px
+
+		h3
+			font-size: 18px
+			font-weight: 700
+			color: #666666
+			margin: 30px 0
+			text-transform: uppercase
+	ul
+		padding: 0
+		margin: 0
+		list-style: none
+
+		li
+			a
+				color: #666666
+				font-size: 18px
+				line-height: 35px
+footer
+	background: #F9F9F9
+	padding: 45px 0
+	font-style: italic
+	font-size: 15px
+	color: #A2B2BF
+
+	.logo
+		img
+			display: inline-block
+			vertical-align: middle
+			margin-right: 5px
+
+	.social
+		text-align: right
+
+		a
+			display: inline-block
+			margin: 0 3px
+
+
+
+
