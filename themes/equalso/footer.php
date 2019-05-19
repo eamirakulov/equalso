@@ -22,8 +22,6 @@
 					</div>
 					<div class="col-sm-4">
 						<div class="subscribe-box">
-							<h3>YES! GET IN TOUCH WITH ME!</h3>
-							<p>Take a different approach to life, why not start today? We will get in touch within 24 hours!</p>
 							<?php echo do_shortcode('[contact-form-7 id="39" title="Get in touch footer"]'); ?>
 						</div>
 					</div>
@@ -38,10 +36,7 @@
 					</div>
 
 					<div class="col-sm-6 social">
-						<a href="#"><img src="<?php bloginfo('template_url'); ?>/img/gp.svg"></a>
-						<a href="#"><img src="<?php bloginfo('template_url'); ?>/img/tw.svg"></a>
-						<a href="#"><img src="<?php bloginfo('template_url'); ?>/img/fb.svg"></a>
-						<a href="#"><img src="<?php bloginfo('template_url'); ?>/img/inst.svg"></a>
+						<?php dynamic_sidebar( 'footer_social' ); ?>
 					</div>
 				</div>
 			</div>

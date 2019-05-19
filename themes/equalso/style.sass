@@ -5,12 +5,16 @@ body
 	margin: 0
 	font-family: 'Source Sans Pro', sans-serif
 	font-size: 17px
+	position: relative
 	p
 		line-height: 30px
 
 .flex
 	display: flex
 	align-items: center
+
+	@media (max-width: 767px)
+		display: block
 
 $rose: #DD4267
 
@@ -23,15 +27,74 @@ a:hover
 img
 	max-width: 100%
 
+.toggle-mobile
+	display: none
+
+.mobile-menu
+	background: $rose
+	color: #fff
+	width: calc(100% - 80px)
+	position: fixed
+	right: -100%
+	top: 0
+	height: 100%
+	padding: 34px 0
+	z-index: 99999
+
+	.social
+		position: absolute
+		bottom: 35px
+		left: 0
+		width: 100%
+
+		a
+			display: inline-block
+			margin: 0 5px
+
+	.logo
+		display: block
+
+	ul
+		padding: 135px 0 0 0
+		margin: 0
+
+		li
+			display: block
+
+			a
+				display: block
+				padding: 14px 0
+				text-align: center
+				color: #fff
+				text-transform: uppercase
+				border-bottom: 3px solid rgba(255,255,255,0.18)
+				font-weight: 700
 header
 	padding: 24px 0
 	position: absolute
 	top: 0
 	left: 0
 	width: 100%
+	z-index: 9
+	@media (max-width: 767px)
+		padding: 33px 0
+		border-bottom: 1px solid rgba(112,112,112,0.28)
+
+		&.white
+			background: #fff
+
+		.toggle-mobile
+			display: block
+			position: absolute
+			right: 15px
+			top: 30px
+			z-index: 9999
 
 	.right
 		text-align: right
+
+		@media (max-width: 767px)
+			display: none
 
 		.start
 			display: inline-block
@@ -50,6 +113,9 @@ header
 
 	.menu
 		text-align: center
+
+		@media (max-width: 767px)
+			display: none
 		ul
 			padding: 0
 			margin: 0
@@ -58,7 +124,8 @@ header
 			li
 				display: inline-block
 				margin: 0 14px
-
+				@media (max-width: 1024px) and (orientation: portrait)
+					margin: 0 2px
 				a
 					color: $rose
 					font-size: 14px
@@ -69,10 +136,29 @@ header
 					&:hover
 						text-decoration: none
 
+				&.current-menu-item
+					position: relative
+					&:after
+						content: " "
+						display: block
+						position: absolute
+						bottom: -10px
+						left: 0
+						right: 0
+						margin: 0 auto
+						width: 5px
+						height: 5px
+						border-radius: 15px
+						background: $rose
+
+
 
 .main-banner
 	background: url(img/main.svg) no-repeat center center
 	background-size: cover
+
+	@media(max-width: 767px)
+		background-size: initial
 
 	h1
 		font-weight: 600
@@ -93,6 +179,7 @@ header
 
 	.style3
 		font-weight: 900
+		text-decoration: underline
 
 
 	.text
@@ -105,6 +192,17 @@ header
 	text-align: center
 	.item
 		padding: 0 95px
+		@media (max-width: 767px)
+			padding: 0 50px
+
+		.style2
+			font-family: 'Vollkorn', serif
+			font-weight: 600
+			font-style: italic
+
+		.style3
+			font-weight: 900
+			text-decoration: underline
 	h2
 		font-size: 32px
 		font-weight: 600
@@ -123,17 +221,33 @@ header
 		p
 			color: #000
 
+.visible-mobile
+	display: none
+
+	@media (max-width: 767px)
+		display: block
+@media (max-width: 767px)
+	.hidden-mobile
+		display: none
 .mosaic
 	padding: 126px 0 0 0
 	.item
 		margin-bottom: 100px
+
+		@media (max-width: 767px)
+			.img
+				margin-bottom: 35px
 		&.odd
 			.inner
 				padding-left: 28px
+				@media (max-width: 767px)
+					padding-left: 0
 
 		&.even
 			.inner
 				padding-right: 28px
+				@media (max-width: 767px)
+					padding-right: 0
 
 		h2
 			font-weight: 600
@@ -158,11 +272,16 @@ header
 		background-size: 20px
 		color: #000
 
+		@media (max-width: 767px)
+			margin-bottom: 30px
+
 	.divider
 		height: 1px
 		width: 67px
 		background: #707070
 		margin: 138px auto 70px auto
+		@media (max-width: 767px)
+			margin: 30px auto 30px auto
 
 	h2
 		max-width: 706px
@@ -175,9 +294,19 @@ header
 	padding: 120px 0
 	.inner
 		padding: 92px 278px
+		max-width: 1170px
+		margin: 0 auto
 		background: #F7F7F7
 		text-align: center
 		border-radius: 20px
+		@media (max-width: 1024px) and (orientation: portrait)
+			padding: 92px 15px
+		@media (max-width: 767px)
+			padding: 92px 15px
+			text-align: left
+
+			.text-right
+				text-align: left !important
 
 		h2
 			font-size: 32px
@@ -195,6 +324,10 @@ header
 
 		.red-btn
 			margin-top: 40px
+			@media (max-width: 1024px) and (orientation: portrait)
+				width: 100%
+			@media (max-width: 767px)
+				width: 100%
 
 		.form
 			margin-top: 54px
@@ -217,6 +350,9 @@ header
 				height: 34px
 				border: none
 				border-radius: 5px
+				@media (max-width: 767px)
+					display: block
+					margin: 0 auto
 
 
 input[type="text"],
@@ -277,7 +413,8 @@ span.wpcf7-not-valid-tip
 	text-transform: uppercase
 	font-weight: 700
 	display: block
-
+	@media (max-width: 767px)
+		text-align: center
 	&:hover
 		color: #fff
 
@@ -303,12 +440,43 @@ span.wpcf7-not-valid-tip
 				li
 					a
 						color: #fff
+					&.current-menu-item
+						&:after
+							content: " "
+							display: block
+							position: absolute
+							bottom: -10px
+							left: 0
+							right: 0
+							margin: 0 auto
+							width: 5px
+							height: 5px
+							border-radius: 15px
+							background: #fff
 
-
+.single-post
+	.main-banner
+		h1
+			a
+				color: #fff
+			p
+				margin: 0
+				line-height: 58px
+				display: inline-block
 .blog_page
 	.blog-container
 		max-width: 877px
 		margin: 0 auto
+		padding: 0 15px
+
+	.main-banner
+		h1
+			a
+				color: #fff
+			p
+				margin: 0
+				line-height: 58px
+				display: inline-block
 
 	.relevant-blogs
 		.relevant-hidden
@@ -348,6 +516,7 @@ span.wpcf7-not-valid-tip
 .single-container
 	max-width: 877px
 	margin: 0 auto
+	padding: 0 15px
 
 .article-content
 	font-size: 17px
@@ -376,6 +545,7 @@ span.wpcf7-not-valid-tip
 			background: #707070
 			margin: 0 auto 44px auto
 
+
 .recent-blogs,
 .relevant-blogs
 	border-bottom: 1px solid rgba(112,112,112,0.25)
@@ -385,9 +555,10 @@ span.wpcf7-not-valid-tip
 		font-weight: 600
 		margin: 0 0 40px 0
 
+		@media(max-width: 767px)
+			text-align: center
+
 	.item
-		background: url(img/blogbg.jpg) no-repeat center
-		background-size: cover
 		display: block
 		color: #fff
 		margin-bottom: 45px
@@ -433,12 +604,22 @@ span.wpcf7-not-valid-tip
 
 .about-us_page
 	.main-banner
-		background: url(img/aboutbg.jpg) no-repeat center center
 		color: #fff
 
+		@media (max-width: 767px)
+			background-size: cover !important
 	.about-intro
 		padding: 78px 0
 		background: #F7F7F7
+
+		.style2
+			font-family: 'Vollkorn', serif
+			font-weight: 600
+			font-style: italic
+
+		.style3
+			font-weight: 900
+			text-decoration: underline
 
 		.container
 			max-width: 997px
@@ -448,6 +629,8 @@ span.wpcf7-not-valid-tip
 			font-weight: 600
 			margin: 0 0 24px 0
 			text-align: center
+			@media (max-width: 767px)
+				text-align: left
 
 		p
 			font-size: 17px
@@ -455,6 +638,10 @@ span.wpcf7-not-valid-tip
 
 	.meet
 		padding: 74px 0
+
+		.img
+			@media (max-width: 767px)
+				margin-bottom: 30px
 
 		h3
 			font-weight: 600
@@ -467,18 +654,40 @@ span.wpcf7-not-valid-tip
 
 	.about-bottom
 		padding: 136px 0 70px 0
+		@media (max-width: 767px)
+			padding: 136px 0 0 0
+
+		.container
+			@media (max-width: 767px)
+				padding: 0
 
 		.inner
 			padding: 70px 170px
-			background: url(img/aboutimg3.jpg) no-repeat center
-			background-size: cover
 			color: #fff
 			border-radius: 15px
+			position: relative
+			@media (max-width: 767px)
+				border-radius: 0
+				padding: 70px 20px
+
+			&:after
+				content: " "
+				display: block
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background: rgba(0,0,0,0.55)
+				z-index: 8
+				border-radius: 15px
 
 			h3
 				font-size: 28px
 				font-weight: 600
 				margin: 0 0 40px 0
+				position: relative
+				z-index: 9
 
 				a
 					color: #fff
@@ -496,6 +705,8 @@ span.wpcf7-not-valid-tip
 			p
 				font-size: 17px
 				margin: 0 0 40px 0
+				position: relative
+				z-index: 9
 
 
 
@@ -512,10 +723,26 @@ span.wpcf7-not-valid-tip
 		color: #fff
 	.three
 		padding: 45px 0
+
+		@media (max-width: 767px)
+			.container
+				padding: 0
+
+		.style2
+			font-family: 'Vollkorn', serif
+			font-weight: 600
+			font-style: italic
+
+		.style3
+			font-weight: 900
+			text-decoration: underline
+
 		.inner
 			padding: 50px
 			background: #F7F7F7
 			border-radius: 15px
+			@media (max-width: 1024px) and (orientation: portrait)
+				margin-bottom: 20px
 		h3
 			font-size: 32px
 			font-weight: 600
@@ -528,6 +755,10 @@ span.wpcf7-not-valid-tip
 
 	.how-we-work
 		padding: 45px 0
+
+		.img
+			@media (max-width: 767px)
+				margin-bottom: 30px
 
 		h3
 			font-weight: 600
@@ -543,9 +774,14 @@ span.wpcf7-not-valid-tip
 
 		.row
 			margin: 0 -30px
+			@media (max-width: 767px)
+				margin: 0 -15px
 
 		.item
 			padding: 0 30px
+			@media (max-width: 767px)
+				padding: 0 15px
+				margin-bottom: 55px
 
 		.container
 			border-top: 1px solid rgba(112,112,112,0.25)
@@ -576,11 +812,17 @@ span.wpcf7-not-valid-tip
 
 .subscribe-big
 	margin-bottom: 100px
+	@media (max-width: 767px)
+		.container
+			padding: 0
 
 	.inner
 		padding: 64px 150px
 		background: #F7F7F7
 		border-radius: 20px
+		@media (max-width: 767px)
+			border-radius: 0
+			padding: 64px 20px
 	h2
 		font-size: 32px
 		font-weight: 600
@@ -603,6 +845,8 @@ span.wpcf7-not-valid-tip
 		border: none
 		margin: 0
 		padding: 10px 20px
+		@media (max-width: 767px)
+			margin-top: 20px
 
 	.wpcf7-response-output
 		font-size: 14px
@@ -653,6 +897,10 @@ span.wpcf7-not-valid-tip
 		color: #fff
 		font-weight: 700
 		border-radius: 7px
+		@media (max-width: 767px)
+			left: 0
+			right: 0
+			margin: 0 auto
 
 		&:hover
 			text-decoration: none
@@ -666,11 +914,17 @@ span.wpcf7-not-valid-tip
 		border: none
 		width: 100%
 		border-radius: 5px
+		@media (max-width: 767px)
+			width: 62px
+			margin: 0 auto
+			display: block
 
 	.congrats
 		clear: both
 		font-size: 17px
 		line-height: 30px
+		@media (max-width: 767px)
+			padding: 0 20px
 
 	.container
 		max-width: 900px
@@ -724,7 +978,7 @@ span.wpcf7-not-valid-tip
 	display: inline-block
 
 	&:hover
-		color: #fff
+		color: $rose
 .footer-top
 	padding: 50px 0
 	.subscribe-box
@@ -733,6 +987,9 @@ span.wpcf7-not-valid-tip
 		border-radius: 10px
 		color: #666666
 		font-size: 18px
+		@media (max-width: 767px)
+			background: none
+			margin-top: 142px
 		input
 			margin-bottom: 0
 
@@ -751,9 +1008,20 @@ span.wpcf7-not-valid-tip
 			margin: 0
 			padding: 10px 20px
 			border: none
+			@media (max-width: 1024px) and (orientation: portrait)
+				margin-top: 20px
+				width: 100%
+				font-weight: 400
+			@media (max-width: 767px)
+				margin-top: 20px
+				width: 100%
+				font-weight: 400
 
 	.inner
 		padding: 0 0 0 20px
+
+		@media (max-width: 767px)
+			padding: 0 0 0 100px
 
 		h3
 			font-size: 18px
@@ -777,8 +1045,13 @@ footer
 	font-style: italic
 	font-size: 15px
 	color: #A2B2BF
+	@media (max-width: 767px)
+		padding: 0
 
 	.logo
+		@media (max-width: 767px)
+			padding: 45px 0
+			text-align: center
 		img
 			display: inline-block
 			vertical-align: middle
@@ -786,10 +1059,16 @@ footer
 
 	.social
 		text-align: right
+		@media (max-width: 767px)
+			background: #fff
+			width: 100%
+			clear: both
+			padding: 45px 0
+			text-align: center
 
 		a
 			display: inline-block
-			margin: 0 3px
+			margin: 0 5px
 
 
 

@@ -9,7 +9,6 @@ function the_slug()
 	$slug = $post_data['post_name'].'_page';
 	return $slug;
 }
-
 /**
  * Returns part of string
  */
@@ -38,8 +37,36 @@ if ( function_exists( 'register_nav_menus' ) ) {
 		)
 	);
 }
+/**
+ * Register our sidebars and widgetized areas.
+ *
+ */
+function arphabet_widgets_init() {
+	register_sidebar( array(
+		'name'          => 'Footer Social',
+		'id'            => 'footer_social',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>'
+	) );
+	register_sidebar( array(
+		'name'          => 'Mobile Social',
+		'id'            => 'mobile_social',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>'
+	) );
+	register_sidebar( array(
+		'name'          => 'People hire trainers',
+		'id'            => 'global_1',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	) );
 
-//add_theme_support( 'post-thumbnails' );
+}
+add_action( 'widgets_init', 'arphabet_widgets_init' );
+
+add_theme_support( 'post-thumbnails' );
 
 //add_action( 'init', 'create_post_type' );
 //function create_post_type() {

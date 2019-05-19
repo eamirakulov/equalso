@@ -38,13 +38,29 @@
 				</div>
 			</div>
 		</div>
+		<div class="mobile-menu">
+			<a class="logo text-center" href="<?php echo get_site_url()?>"><img alt="Logo" src="<?php bloginfo('template_url'); ?>/img/logow.svg" /></a>
+			<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container_class' => 'mobile-menu-container') ); ?>
+
+			<div class="social text-center">
+				<?php dynamic_sidebar( 'mobile_social' ); ?>
+			</div>
+		</div>
+		<?php if(is_page('our-philosophy') || is_page('about-us')) : ?>
+		<header class="white">
+		<?php else : ?>
 		<header>
+		<?php endif; ?>
 			<div class="container">
+				<?php if(!is_page('blog') && !is_single()) : ?>
+					<a href="#" class="toggle-mobile"><img src="<?php bloginfo('template_url'); ?>/img/hamb.svg"></a>
+				<?php endif; ?>
 				<div class="row flex">
 					<?php if(!is_single() && !is_page('blog')) : ?>
 						<div class="col-md-3 left">
 							<?php if(is_page('our-philosophy') || is_page('about-us')) : ?>
-								<a class="logo" href="<?php echo get_site_url()?>"><img alt="Logo" src="<?php bloginfo('template_url'); ?>/img/logow.svg" /></a>
+								<a class="logo hidden-xs" href="<?php echo get_site_url()?>"><img alt="Logo" src="<?php bloginfo('template_url'); ?>/img/logow.svg" /></a>
+								<a class="logo visible-xs" href="<?php echo get_site_url()?>"><img alt="Logo" src="<?php bloginfo('template_url'); ?>/img/logo.svg" /></a>
 							<?php else : ?>
 								<a class="logo" href="<?php echo get_site_url()?>"><img alt="Logo" src="<?php bloginfo('template_url'); ?>/img/logo.svg" /></a>
 							<?php endif; ?>

@@ -4,13 +4,17 @@
 body {
   margin: 0;
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 17px; }
+  font-size: 17px;
+  position: relative; }
   body p {
     line-height: 30px; }
 
 .flex {
   display: flex;
   align-items: center; }
+  @media (max-width: 767px) {
+    .flex {
+      display: block; } }
 
 a:hover {
   text-decoration: none; }
@@ -21,14 +25,67 @@ a:hover {
 img {
   max-width: 100%; }
 
+.toggle-mobile {
+  display: none; }
+
+.mobile-menu {
+  background: #DD4267;
+  color: #fff;
+  width: calc(100% - 80px);
+  position: fixed;
+  right: -100%;
+  top: 0;
+  height: 100%;
+  padding: 34px 0;
+  z-index: 99999; }
+  .mobile-menu .social {
+    position: absolute;
+    bottom: 35px;
+    left: 0;
+    width: 100%; }
+    .mobile-menu .social a {
+      display: inline-block;
+      margin: 0 5px; }
+  .mobile-menu .logo {
+    display: block; }
+  .mobile-menu ul {
+    padding: 135px 0 0 0;
+    margin: 0; }
+    .mobile-menu ul li {
+      display: block; }
+      .mobile-menu ul li a {
+        display: block;
+        padding: 14px 0;
+        text-align: center;
+        color: #fff;
+        text-transform: uppercase;
+        border-bottom: 3px solid rgba(255, 255, 255, 0.18);
+        font-weight: 700; }
+
 header {
   padding: 24px 0;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%; }
+  width: 100%;
+  z-index: 9; }
+  @media (max-width: 767px) {
+    header {
+      padding: 33px 0;
+      border-bottom: 1px solid rgba(112, 112, 112, 0.28); }
+      header.white {
+        background: #fff; }
+      header .toggle-mobile {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 30px;
+        z-index: 9999; } }
   header .right {
     text-align: right; }
+    @media (max-width: 767px) {
+      header .right {
+        display: none; } }
     header .right .start {
       display: inline-block;
       width: 143px;
@@ -44,6 +101,9 @@ header {
         text-decoration: none; }
   header .menu {
     text-align: center; }
+    @media (max-width: 767px) {
+      header .menu {
+        display: none; } }
     header .menu ul {
       padding: 0;
       margin: 0;
@@ -51,6 +111,9 @@ header {
       header .menu ul li {
         display: inline-block;
         margin: 0 14px; }
+        @media (max-width: 1024px) and (orientation: portrait) {
+          header .menu ul li {
+            margin: 0 2px; } }
         header .menu ul li a {
           color: #DD4267;
           font-size: 14px;
@@ -59,10 +122,27 @@ header {
           text-transform: uppercase; }
           header .menu ul li a:hover {
             text-decoration: none; }
+        header .menu ul li.current-menu-item {
+          position: relative; }
+          header .menu ul li.current-menu-item:after {
+            content: " ";
+            display: block;
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 5px;
+            height: 5px;
+            border-radius: 15px;
+            background: #DD4267; }
 
 .main-banner {
   background: url(img/main.svg) no-repeat center center;
   background-size: cover; }
+@media(max-width: 767px) {
+  .main-banner {
+    background-size: initial; } }
   .main-banner h1 {
     font-weight: 600;
     font-size: 60px;
@@ -77,7 +157,8 @@ header {
     font-weight: 600;
     font-style: italic; }
   .main-banner .style3 {
-    font-weight: 900; }
+    font-weight: 900;
+    text-decoration: underline; }
   .main-banner .text {
     padding: 290px 0 173px 0;
     text-align: center; }
@@ -88,6 +169,16 @@ header {
   text-align: center; }
   .home-slider .item {
     padding: 0 95px; }
+    @media (max-width: 767px) {
+      .home-slider .item {
+        padding: 0 50px; } }
+    .home-slider .item .style2 {
+      font-family: "Vollkorn", serif;
+      font-weight: 600;
+      font-style: italic; }
+    .home-slider .item .style3 {
+      font-weight: 900;
+      text-decoration: underline; }
   .home-slider h2 {
     font-size: 32px;
     font-weight: 600;
@@ -102,14 +193,32 @@ header {
   .home-slider .slick-active p {
     color: #000; }
 
+.visible-mobile {
+  display: none; }
+  @media (max-width: 767px) {
+    .visible-mobile {
+      display: block; } }
+
+@media (max-width: 767px) {
+  .hidden-mobile {
+    display: none; } }
 .mosaic {
   padding: 126px 0 0 0; }
   .mosaic .item {
     margin-bottom: 100px; }
+    @media (max-width: 767px) {
+      .mosaic .item .img {
+        margin-bottom: 35px; } }
     .mosaic .item.odd .inner {
       padding-left: 28px; }
+      @media (max-width: 767px) {
+        .mosaic .item.odd .inner {
+          padding-left: 0; } }
     .mosaic .item.even .inner {
       padding-right: 28px; }
+      @media (max-width: 767px) {
+        .mosaic .item.even .inner {
+          padding-right: 0; } }
     .mosaic .item h2 {
       font-weight: 600;
       font-size: 32px;
@@ -130,11 +239,17 @@ header {
     background: url(img/arrow.svg) no-repeat right center;
     background-size: 20px;
     color: #000; }
+    @media (max-width: 767px) {
+      .letswork a {
+        margin-bottom: 30px; } }
   .letswork .divider {
     height: 1px;
     width: 67px;
     background: #707070;
     margin: 138px auto 70px auto; }
+    @media (max-width: 767px) {
+      .letswork .divider {
+        margin: 30px auto 30px auto; } }
   .letswork h2 {
     max-width: 706px;
     margin: 0 auto;
@@ -146,9 +261,20 @@ header {
   padding: 120px 0; }
   .contact .inner {
     padding: 92px 278px;
+    max-width: 1170px;
+    margin: 0 auto;
     background: #F7F7F7;
     text-align: center;
     border-radius: 20px; }
+    @media (max-width: 1024px) and (orientation: portrait) {
+      .contact .inner {
+        padding: 92px 15px; } }
+    @media (max-width: 767px) {
+      .contact .inner {
+        padding: 92px 15px;
+        text-align: left; }
+        .contact .inner .text-right {
+          text-align: left !important; } }
     .contact .inner h2 {
       font-size: 32px;
       font-weight: 600;
@@ -162,6 +288,12 @@ header {
       margin: 0; }
     .contact .inner .red-btn {
       margin-top: 40px; }
+      @media (max-width: 1024px) and (orientation: portrait) {
+        .contact .inner .red-btn {
+          width: 100%; } }
+      @media (max-width: 767px) {
+        .contact .inner .red-btn {
+          width: 100%; } }
     .contact .inner .form {
       margin-top: 54px; }
       .contact .inner .form .subj {
@@ -180,6 +312,10 @@ header {
         height: 34px;
         border: none;
         border-radius: 5px; }
+        @media (max-width: 767px) {
+          .contact .inner .form input[type="submit"] {
+            display: block;
+            margin: 0 auto; } }
 
 input[type="text"],
 input[type="email"] {
@@ -246,6 +382,9 @@ span.wpcf7-not-valid-tip {
   text-transform: uppercase;
   font-weight: 700;
   display: block; }
+  @media (max-width: 767px) {
+    .back {
+      text-align: center; } }
   .back:hover {
     color: #fff; }
   .back img {
@@ -266,10 +405,38 @@ span.wpcf7-not-valid-tip {
 .about-us_page header .menu ul li a,
 .blog_page header .menu ul li a {
   color: #fff; }
+.our-philosophy_page header .menu ul li.current-menu-item:after,
+.about-us_page header .menu ul li.current-menu-item:after,
+.blog_page header .menu ul li.current-menu-item:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 5px;
+  height: 5px;
+  border-radius: 15px;
+  background: #fff; }
+
+.single-post .main-banner h1 a {
+  color: #fff; }
+.single-post .main-banner h1 p {
+  margin: 0;
+  line-height: 58px;
+  display: inline-block; }
 
 .blog_page .blog-container {
   max-width: 877px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 15px; }
+.blog_page .main-banner h1 a {
+  color: #fff; }
+.blog_page .main-banner h1 p {
+  margin: 0;
+  line-height: 58px;
+  display: inline-block; }
 .blog_page .relevant-blogs .relevant-hidden {
   display: none; }
 .blog_page .relevant-blogs .loadmore {
@@ -299,7 +466,8 @@ span.wpcf7-not-valid-tip {
 
 .single-container {
   max-width: 877px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 15px; }
 
 .article-content {
   font-size: 17px;
@@ -334,10 +502,12 @@ span.wpcf7-not-valid-tip {
     font-size: 32px;
     font-weight: 600;
     margin: 0 0 40px 0; }
+@media(max-width: 767px) {
+  .recent-blogs h2,
+  .relevant-blogs h2 {
+    text-align: center; } }
   .recent-blogs .item,
   .relevant-blogs .item {
-    background: url(img/blogbg.jpg) no-repeat center;
-    background-size: cover;
     display: block;
     color: #fff;
     margin-bottom: 45px;
@@ -378,11 +548,20 @@ span.wpcf7-not-valid-tip {
     margin: 0 0 40px 0; }
 
 .about-us_page .main-banner {
-  background: url(img/aboutbg.jpg) no-repeat center center;
   color: #fff; }
+  @media (max-width: 767px) {
+    .about-us_page .main-banner {
+      background-size: cover !important; } }
 .about-us_page .about-intro {
   padding: 78px 0;
   background: #F7F7F7; }
+  .about-us_page .about-intro .style2 {
+    font-family: "Vollkorn", serif;
+    font-weight: 600;
+    font-style: italic; }
+  .about-us_page .about-intro .style3 {
+    font-weight: 900;
+    text-decoration: underline; }
   .about-us_page .about-intro .container {
     max-width: 997px;
     margin: 0 auto; }
@@ -391,11 +570,17 @@ span.wpcf7-not-valid-tip {
     font-weight: 600;
     margin: 0 0 24px 0;
     text-align: center; }
+    @media (max-width: 767px) {
+      .about-us_page .about-intro h2 {
+        text-align: left; } }
   .about-us_page .about-intro p {
     font-size: 17px;
     margin: 0 0 30px 0; }
 .about-us_page .meet {
   padding: 74px 0; }
+  @media (max-width: 767px) {
+    .about-us_page .meet .img {
+      margin-bottom: 30px; } }
   .about-us_page .meet h3 {
     font-weight: 600;
     font-size: 24px;
@@ -405,16 +590,38 @@ span.wpcf7-not-valid-tip {
     margin: 0 0 30px 0; }
 .about-us_page .about-bottom {
   padding: 136px 0 70px 0; }
+  @media (max-width: 767px) {
+    .about-us_page .about-bottom {
+      padding: 136px 0 0 0; } }
+  @media (max-width: 767px) {
+    .about-us_page .about-bottom .container {
+      padding: 0; } }
   .about-us_page .about-bottom .inner {
     padding: 70px 170px;
-    background: url(img/aboutimg3.jpg) no-repeat center;
-    background-size: cover;
     color: #fff;
-    border-radius: 15px; }
+    border-radius: 15px;
+    position: relative; }
+    @media (max-width: 767px) {
+      .about-us_page .about-bottom .inner {
+        border-radius: 0;
+        padding: 70px 20px; } }
+    .about-us_page .about-bottom .inner:after {
+      content: " ";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: 8;
+      border-radius: 15px; }
     .about-us_page .about-bottom .inner h3 {
       font-size: 28px;
       font-weight: 600;
-      margin: 0 0 40px 0; }
+      margin: 0 0 40px 0;
+      position: relative;
+      z-index: 9; }
       .about-us_page .about-bottom .inner h3 a {
         color: #fff; }
       .about-us_page .about-bottom .inner h3:after {
@@ -428,7 +635,9 @@ span.wpcf7-not-valid-tip {
         margin-left: 10px; }
     .about-us_page .about-bottom .inner p {
       font-size: 17px;
-      margin: 0 0 40px 0; }
+      margin: 0 0 40px 0;
+      position: relative;
+      z-index: 9; }
 .about-us_page .divider {
   height: 1px;
   width: 67px;
@@ -440,10 +649,23 @@ span.wpcf7-not-valid-tip {
   color: #fff; }
 .our-philosophy_page .three {
   padding: 45px 0; }
+  @media (max-width: 767px) {
+    .our-philosophy_page .three .container {
+      padding: 0; } }
+  .our-philosophy_page .three .style2 {
+    font-family: "Vollkorn", serif;
+    font-weight: 600;
+    font-style: italic; }
+  .our-philosophy_page .three .style3 {
+    font-weight: 900;
+    text-decoration: underline; }
   .our-philosophy_page .three .inner {
     padding: 50px;
     background: #F7F7F7;
     border-radius: 15px; }
+    @media (max-width: 1024px) and (orientation: portrait) {
+      .our-philosophy_page .three .inner {
+        margin-bottom: 20px; } }
   .our-philosophy_page .three h3 {
     font-size: 32px;
     font-weight: 600;
@@ -454,6 +676,9 @@ span.wpcf7-not-valid-tip {
     margin: 0; }
 .our-philosophy_page .how-we-work {
   padding: 45px 0; }
+  @media (max-width: 767px) {
+    .our-philosophy_page .how-we-work .img {
+      margin-bottom: 30px; } }
   .our-philosophy_page .how-we-work h3 {
     font-weight: 600;
     font-size: 24px;
@@ -465,8 +690,15 @@ span.wpcf7-not-valid-tip {
   padding: 45px 0; }
   .our-philosophy_page .linked-articles .row {
     margin: 0 -30px; }
+    @media (max-width: 767px) {
+      .our-philosophy_page .linked-articles .row {
+        margin: 0 -15px; } }
   .our-philosophy_page .linked-articles .item {
     padding: 0 30px; }
+    @media (max-width: 767px) {
+      .our-philosophy_page .linked-articles .item {
+        padding: 0 15px;
+        margin-bottom: 55px; } }
   .our-philosophy_page .linked-articles .container {
     border-top: 1px solid rgba(112, 112, 112, 0.25);
     padding-top: 70px; }
@@ -491,10 +723,17 @@ span.wpcf7-not-valid-tip {
 
 .subscribe-big {
   margin-bottom: 100px; }
+  @media (max-width: 767px) {
+    .subscribe-big .container {
+      padding: 0; } }
   .subscribe-big .inner {
     padding: 64px 150px;
     background: #F7F7F7;
     border-radius: 20px; }
+    @media (max-width: 767px) {
+      .subscribe-big .inner {
+        border-radius: 0;
+        padding: 64px 20px; } }
   .subscribe-big h2 {
     font-size: 32px;
     font-weight: 600;
@@ -514,6 +753,9 @@ span.wpcf7-not-valid-tip {
     border: none;
     margin: 0;
     padding: 10px 20px; }
+    @media (max-width: 767px) {
+      .subscribe-big .red-btn {
+        margin-top: 20px; } }
   .subscribe-big .wpcf7-response-output {
     font-size: 14px;
     border: none !important;
@@ -560,6 +802,11 @@ span.wpcf7-not-valid-tip {
     color: #fff;
     font-weight: 700;
     border-radius: 7px; }
+    @media (max-width: 767px) {
+      #start-modal .close-modal {
+        left: 0;
+        right: 0;
+        margin: 0 auto; } }
     #start-modal .close-modal:hover {
       text-decoration: none; }
   #start-modal input[type="submit"] {
@@ -571,10 +818,18 @@ span.wpcf7-not-valid-tip {
     border: none;
     width: 100%;
     border-radius: 5px; }
+    @media (max-width: 767px) {
+      #start-modal input[type="submit"] {
+        width: 62px;
+        margin: 0 auto;
+        display: block; } }
   #start-modal .congrats {
     clear: both;
     font-size: 17px;
     line-height: 30px; }
+    @media (max-width: 767px) {
+      #start-modal .congrats {
+        padding: 0 20px; } }
   #start-modal .container {
     max-width: 900px;
     height: 100%;
@@ -621,7 +876,7 @@ span.wpcf7-not-valid-tip {
   margin-top: 20px;
   display: inline-block; }
   .white-btn:hover {
-    color: #fff; }
+    color: #DD4267; }
 
 .footer-top {
   padding: 50px 0; }
@@ -631,6 +886,10 @@ span.wpcf7-not-valid-tip {
     border-radius: 10px;
     color: #666666;
     font-size: 18px; }
+    @media (max-width: 767px) {
+      .footer-top .subscribe-box {
+        background: none;
+        margin-top: 142px; } }
     .footer-top .subscribe-box input {
       margin-bottom: 0; }
     .footer-top .subscribe-box h3 {
@@ -645,8 +904,21 @@ span.wpcf7-not-valid-tip {
       margin: 0;
       padding: 10px 20px;
       border: none; }
+      @media (max-width: 1024px) and (orientation: portrait) {
+        .footer-top .subscribe-box .red-btn {
+          margin-top: 20px;
+          width: 100%;
+          font-weight: 400; } }
+      @media (max-width: 767px) {
+        .footer-top .subscribe-box .red-btn {
+          margin-top: 20px;
+          width: 100%;
+          font-weight: 400; } }
   .footer-top .inner {
     padding: 0 0 0 20px; }
+    @media (max-width: 767px) {
+      .footer-top .inner {
+        padding: 0 0 0 100px; } }
     .footer-top .inner h3 {
       font-size: 18px;
       font-weight: 700;
@@ -668,14 +940,28 @@ footer {
   font-style: italic;
   font-size: 15px;
   color: #A2B2BF; }
+  @media (max-width: 767px) {
+    footer {
+      padding: 0; } }
+  @media (max-width: 767px) {
+    footer .logo {
+      padding: 45px 0;
+      text-align: center; } }
   footer .logo img {
     display: inline-block;
     vertical-align: middle;
     margin-right: 5px; }
   footer .social {
     text-align: right; }
+    @media (max-width: 767px) {
+      footer .social {
+        background: #fff;
+        width: 100%;
+        clear: both;
+        padding: 45px 0;
+        text-align: center; } }
     footer .social a {
       display: inline-block;
-      margin: 0 3px; }
+      margin: 0 5px; }
 
 /*# sourceMappingURL=style.css.map */
