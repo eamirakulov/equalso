@@ -550,6 +550,8 @@ span.wpcf7-not-valid-tip {
     font-size: 32px;
     font-weight: 600;
     margin: 0; }
+    .blogs-info h2 a {
+      color: #000; }
   .blogs-info h3 {
     font-size: 24px;
     line-height: 40px;
