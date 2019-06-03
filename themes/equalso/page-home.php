@@ -63,8 +63,8 @@
 			    		if(get_sub_field('side') === 'left') : ?>
 							<div class="odd item">
 								<div class="row">
-									<div class="col-sm-6 img">
-										<img src="<?php bloginfo('template_url'); ?>/img/img1.jpg">
+									<div class="col-sm-6 img" style="background: url(<?php echo the_sub_field('image'); ?>) no-repeat center; background-size: cover;">
+										
 									</div>
 									<div class="col-sm-6">
 										<div class="inner">
@@ -78,9 +78,7 @@
 						<?php else : ?>
 							<div class="even item">
 								<div class="row">
-									<div class="col-sm-6 img visible-mobile">
-										<img src="<?php bloginfo('template_url'); ?>/img/img1.jpg">
-									</div>
+									<div class="col-sm-6 img visible-mobile" style="background: url(<?php echo the_sub_field('image'); ?>) no-repeat center; background-size: cover;">									</div>
 									<div class="col-sm-6">
 										<div class="inner">
 											<h2><?php echo the_sub_field('title'); ?></h2>
@@ -88,8 +86,7 @@
 											<p><?php echo the_sub_field('text'); ?></p>
 										</div>
 									</div>
-									<div class="col-sm-6 hidden-mobile">
-										<img src="<?php bloginfo('template_url'); ?>/img/img1.jpg">
+									<div class="col-sm-6 img hidden-mobile" style="background: url(<?php echo the_sub_field('image'); ?>) no-repeat center; background-size: cover;">
 									</div>
 								</div>
 							</div>

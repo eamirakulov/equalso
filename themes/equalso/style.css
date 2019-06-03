@@ -111,7 +111,10 @@ header {
       header .menu ul li {
         display: inline-block;
         margin: 0 14px; }
-        @media (max-width: 1024px) and (orientation: portrait) {
+        @media (max-width: 1200px) {
+          header .menu ul li {
+            margin: 0 4px; } }
+        @media (max-width: 1024px) {
           header .menu ul li {
             margin: 0 2px; } }
         header .menu ul li a {
@@ -206,6 +209,10 @@ header {
   padding: 126px 0 0 0; }
   .mosaic .item {
     margin-bottom: 100px; }
+    .mosaic .item > .row {
+      display: flex; }
+    .mosaic .item .img {
+      border-radius: 15px; }
     @media (max-width: 767px) {
       .mosaic .item .img {
         margin-bottom: 35px; } }
@@ -227,7 +234,7 @@ header {
       font-weight: 600;
       font-size: 24px; }
     .mosaic .item p {
-      font-size: 24px; }
+      font-size: 17px; }
 
 .letswork {
   text-align: center; }
@@ -258,7 +265,7 @@ header {
     line-height: 40px; }
 
 .contact {
-  padding: 120px 0; }
+  padding: 120px 0 100px 0; }
   .contact .inner {
     padding: 92px 278px;
     max-width: 1170px;
@@ -299,7 +306,9 @@ header {
       .contact .inner .form .subj {
         text-align: left;
         margin-bottom: 20px;
-        font-size: 14px; }
+        font-size: 14px;
+        display: flex;
+        align-items: center; }
         .contact .inner .form .subj label {
           font-weight: 400; }
         .contact .inner .form .subj input {
@@ -378,6 +387,7 @@ span.wpcf7-not-valid-tip {
 
 .back {
   color: #fff;
+  margin-top: 13px;
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 700;
@@ -420,6 +430,8 @@ span.wpcf7-not-valid-tip {
   border-radius: 15px;
   background: #fff; }
 
+.single-post .main-banner .container {
+  max-width: 850px; }
 .single-post .main-banner h1 a {
   color: #fff; }
 .single-post .main-banner h1 p {
@@ -431,6 +443,8 @@ span.wpcf7-not-valid-tip {
   max-width: 877px;
   margin: 0 auto;
   padding: 0 15px; }
+.blog_page .main-banner .container {
+  max-width: 900px; }
 .blog_page .main-banner h1 a {
   color: #fff; }
 .blog_page .main-banner h1 p {
@@ -455,6 +469,15 @@ span.wpcf7-not-valid-tip {
   border: none; }
   .blog_page .recent-blogs .item {
     margin: 0; }
+    .blog_page .recent-blogs .item h3:after {
+      content: " ";
+      display: inline-block;
+      vertical-align: middle;
+      background: url(img/arrow-frw.svg) no-repeat right center;
+      background-size: 100%;
+      width: 18.83px;
+      height: 18px;
+      margin-left: 8px; }
   .blog_page .recent-blogs .article {
     border-bottom: 1px solid rgba(112, 112, 112, 0.25);
     padding: 0 0 30px 0;
@@ -563,7 +586,7 @@ span.wpcf7-not-valid-tip {
     font-weight: 900;
     text-decoration: underline; }
   .about-us_page .about-intro .container {
-    max-width: 997px;
+    max-width: 820px;
     margin: 0 auto; }
   .about-us_page .about-intro h2 {
     font-size: 32px;
@@ -577,7 +600,7 @@ span.wpcf7-not-valid-tip {
     font-size: 17px;
     margin: 0 0 30px 0; }
 .about-us_page .meet {
-  padding: 74px 0; }
+  padding: 74px 0 0 0; }
   @media (max-width: 767px) {
     .about-us_page .meet .img {
       margin-bottom: 30px; } }
@@ -646,7 +669,10 @@ span.wpcf7-not-valid-tip {
 
 .our-philosophy_page .main-banner {
   background: url(img/bgrose.svg) no-repeat center center;
+  background-size: cover;
   color: #fff; }
+  .our-philosophy_page .main-banner .text {
+    padding: 290px 0 230px 0; }
 .our-philosophy_page .three {
   padding: 45px 0; }
   @media (max-width: 767px) {
@@ -722,7 +748,7 @@ span.wpcf7-not-valid-tip {
     margin: 0 0 30px 0; }
 
 .subscribe-big {
-  margin-bottom: 100px; }
+  margin-bottom: 80px; }
   @media (max-width: 767px) {
     .subscribe-big .container {
       padding: 0; } }
@@ -825,13 +851,15 @@ span.wpcf7-not-valid-tip {
         display: block; } }
   #start-modal .congrats {
     clear: both;
+    text-align: left;
     font-size: 17px;
+    padding: 0 15px;
     line-height: 30px; }
     @media (max-width: 767px) {
       #start-modal .congrats {
         padding: 0 20px; } }
   #start-modal .container {
-    max-width: 900px;
+    max-width: 730px;
     height: 100%;
     margin: 0 auto;
     display: flex;

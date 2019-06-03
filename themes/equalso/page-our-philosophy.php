@@ -2,11 +2,9 @@
 
 	<?php if(have_posts()): the_post(); ?>
 	<div class="main-banner">
-		<div class="main-banner">
-			<div class="container">
-				<div class="text">
-					<?php echo get_field('header_content'); ?>
-				</div>
+		<div class="container">
+			<div class="text">
+				<?php echo get_field('header_content'); ?>
 			</div>
 		</div>
 	</div>
