@@ -443,6 +443,10 @@ span.wpcf7-not-valid-tip {
   height: 5px;
   border-radius: 15px;
   background: #fff; }
+.our-philosophy_page header .menu ul li.current-menu-item.menu-item-object-custom:after,
+.about-us_page header .menu ul li.current-menu-item.menu-item-object-custom:after,
+.blog_page header .menu ul li.current-menu-item.menu-item-object-custom:after {
+  content: none; }
 
 .single-post .main-banner .container {
   max-width: 850px; }
