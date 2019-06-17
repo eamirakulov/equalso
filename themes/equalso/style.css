@@ -20,7 +20,8 @@ a:hover {
   text-decoration: none; }
 
 *:focus {
-  outline: none; }
+  outline: none;
+  text-decoration: none !important; }
 
 img {
   max-width: 100%; }
@@ -31,7 +32,7 @@ img {
 .mobile-menu {
   background: #DD4267;
   color: #fff;
-  width: calc(100% - 80px);
+  width: calc(100% - 64px);
   position: fixed;
   right: -100%;
   top: 0;
@@ -151,8 +152,12 @@ header {
     font-size: 60px;
     line-height: 58px;
     margin: 0 0 20px 0; }
+@media(max-width: 767px) {
+  .main-banner h1 {
+    font-size: 53px; } }
   .main-banner .subtitle {
-    font-size: 21px; }
+    font-size: 21px;
+    padding: 0 20px; }
   .main-banner .style1 {
     font-weight: 600; }
   .main-banner .style2 {
@@ -211,8 +216,16 @@ header {
     margin-bottom: 100px; }
     .mosaic .item > .row {
       display: flex; }
+      @media (max-width: 767px) {
+        .mosaic .item > .row {
+          display: block; } }
     .mosaic .item .img {
-      border-radius: 15px; }
+      border-radius: 15px;
+      height: 319px; }
+      @media (max-width: 767px) {
+        .mosaic .item .img {
+          background: none !important;
+          height: auto; } }
     @media (max-width: 767px) {
       .mosaic .item .img {
         margin-bottom: 35px; } }
@@ -279,7 +292,8 @@ header {
     @media (max-width: 767px) {
       .contact .inner {
         padding: 92px 15px;
-        text-align: left; }
+        text-align: left;
+        border-radius: 0; }
         .contact .inner .text-right {
           text-align: left !important; } }
     .contact .inner h2 {
@@ -395,7 +409,7 @@ span.wpcf7-not-valid-tip {
   @media (max-width: 767px) {
     .back {
       text-align: center; } }
-  .back:hover {
+  .back:hover, .back:focus {
     color: #fff; }
   .back img {
     margin-right: 3px;
@@ -594,10 +608,7 @@ span.wpcf7-not-valid-tip {
     font-size: 32px;
     font-weight: 600;
     margin: 0 0 24px 0;
-    text-align: center; }
-    @media (max-width: 767px) {
-      .about-us_page .about-intro h2 {
-        text-align: left; } }
+    text-align: left; }
   .about-us_page .about-intro p {
     font-size: 17px;
     margin: 0 0 30px 0; }
@@ -658,6 +669,9 @@ span.wpcf7-not-valid-tip {
         display: inline-block;
         vertical-align: middle;
         margin-left: 10px; }
+        @media (max-width: 767px) {
+          .about-us_page .about-bottom .inner h3:after {
+            content: none; } }
     .about-us_page .about-bottom .inner p {
       font-size: 17px;
       margin: 0 0 40px 0;
@@ -678,8 +692,13 @@ span.wpcf7-not-valid-tip {
 .our-philosophy_page .three {
   padding: 45px 0; }
   @media (max-width: 767px) {
-    .our-philosophy_page .three .container {
-      padding: 0; } }
+    .our-philosophy_page .three {
+      padding-top: 0; }
+      .our-philosophy_page .three .row {
+        background: #F7F7F7;
+        margin: 0; }
+      .our-philosophy_page .three .container {
+        padding: 0; } }
   .our-philosophy_page .three .style2 {
     font-family: "Vollkorn", serif;
     font-weight: 600;
@@ -694,6 +713,9 @@ span.wpcf7-not-valid-tip {
     @media (max-width: 1024px) and (orientation: portrait) {
       .our-philosophy_page .three .inner {
         margin-bottom: 20px; } }
+    @media (max-width: 767px) {
+      .our-philosophy_page .three .inner {
+        border-radius: 0; } }
   .our-philosophy_page .three h3 {
     font-size: 32px;
     font-weight: 600;
@@ -817,10 +839,14 @@ span.wpcf7-not-valid-tip {
   display: none; }
   #start-modal input[type="email"] {
     color: #000; }
+  #start-modal .container1 {
+    max-width: 1170px;
+    margin: 0 auto;
+    position: relative; }
   #start-modal .close-modal {
     position: absolute;
     top: 25px;
-    right: 45px;
+    right: 15px;
     display: inline-block;
     width: 143px;
     height: 46px;
@@ -869,7 +895,8 @@ span.wpcf7-not-valid-tip {
   #start-modal h2 {
     font-size: 32px;
     font-weight: 600;
-    margin: 0 0 30px 0; }
+    margin: 0 0 30px 0;
+    text-align: left; }
   #start-modal .wpcf7-response-output {
     font-size: 14px;
     border: none !important;
@@ -919,7 +946,8 @@ span.wpcf7-not-valid-tip {
     @media (max-width: 767px) {
       .footer-top .subscribe-box {
         background: none;
-        margin-top: 142px; } }
+        margin-top: 142px;
+        padding: 0; } }
     .footer-top .subscribe-box input {
       margin-bottom: 0; }
     .footer-top .subscribe-box h3 {
@@ -948,7 +976,7 @@ span.wpcf7-not-valid-tip {
     padding: 0 0 0 20px; }
     @media (max-width: 767px) {
       .footer-top .inner {
-        padding: 0 0 0 100px; } }
+        padding: 0; } }
     .footer-top .inner h3 {
       font-size: 18px;
       font-weight: 700;

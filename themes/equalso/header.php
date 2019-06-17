@@ -28,7 +28,9 @@
 	<body class="<?php echo the_slug(); ?>">
 		<!--[if lt IE 8]><p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>.</p><![endif]-->
 		<div id="start-modal">
-			<a href="#" class="close-modal">CLOSE WINDOW</a>
+			<div class="container1">
+				<a href="#" class="close-modal">CLOSE WINDOW</a>
+			</div>
 			<div class="container">
 				<div>
 					<h2>Enter your e-mail address and we will get in touch!</h2>

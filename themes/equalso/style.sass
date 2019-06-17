@@ -23,6 +23,7 @@ a:hover
 
 *:focus
 	outline: none
+	text-decoration: none !important
 
 img
 	max-width: 100%
@@ -33,7 +34,7 @@ img
 .mobile-menu
 	background: $rose
 	color: #fff
-	width: calc(100% - 80px)
+	width: calc(100% - 64px)
 	position: fixed
 	right: -100%
 	top: 0
@@ -167,9 +168,12 @@ header
 		font-size: 60px
 		line-height: 58px
 		margin: 0 0 20px 0
+		@media(max-width: 767px)
+			font-size: 53px
 
 	.subtitle
 		font-size: 21px
+		padding: 0 20px
 
 	.style1
 		font-weight: 600
@@ -238,9 +242,15 @@ header
 
 		> .row
 			display: flex
+			@media (max-width: 767px)
+				display: block
 
 		.img
 			border-radius: 15px
+			height: 319px
+			@media (max-width: 767px)
+				background: none !important
+				height: auto
 
 		@media (max-width: 767px)
 			.img
@@ -312,6 +322,7 @@ header
 		@media (max-width: 767px)
 			padding: 92px 15px
 			text-align: left
+			border-radius: 0
 
 			.text-right
 				text-align: left !important
@@ -426,7 +437,8 @@ span.wpcf7-not-valid-tip
 	display: block
 	@media (max-width: 767px)
 		text-align: center
-	&:hover
+	&:hover,
+	&:focus
 		color: #fff
 
 	img
@@ -656,9 +668,7 @@ span.wpcf7-not-valid-tip
 			font-size: 32px
 			font-weight: 600
 			margin: 0 0 24px 0
-			text-align: center
-			@media (max-width: 767px)
-				text-align: left
+			text-align: left
 
 		p
 			font-size: 17px
@@ -730,6 +740,9 @@ span.wpcf7-not-valid-tip
 					vertical-align: middle
 					margin-left: 10px
 
+					@media (max-width: 767px)
+						content: none
+
 			p
 				font-size: 17px
 				margin: 0 0 40px 0
@@ -758,6 +771,11 @@ span.wpcf7-not-valid-tip
 		padding: 45px 0
 
 		@media (max-width: 767px)
+			padding-top: 0
+			.row
+				background: #F7F7F7
+				margin: 0
+
 			.container
 				padding: 0
 
@@ -776,6 +794,8 @@ span.wpcf7-not-valid-tip
 			border-radius: 15px
 			@media (max-width: 1024px) and (orientation: portrait)
 				margin-bottom: 20px
+			@media (max-width: 767px)
+				border-radius: 0
 		h3
 			font-size: 32px
 			font-weight: 600
@@ -917,10 +937,15 @@ span.wpcf7-not-valid-tip
 	input[type="email"]
 		color: #000
 
+	.container1
+		max-width: 1170px
+		margin: 0 auto
+		position: relative
+
 	.close-modal
 		position: absolute
 		top: 25px
-		right: 45px
+		right: 15px
 		display: inline-block
 		width: 143px
 		height: 46px
@@ -972,6 +997,7 @@ span.wpcf7-not-valid-tip
 		font-size: 32px
 		font-weight: 600
 		margin: 0 0 30px 0
+		text-align: left
 
 
 
@@ -1025,6 +1051,7 @@ span.wpcf7-not-valid-tip
 		@media (max-width: 767px)
 			background: none
 			margin-top: 142px
+			padding: 0
 		input
 			margin-bottom: 0
 
@@ -1056,7 +1083,7 @@ span.wpcf7-not-valid-tip
 		padding: 0 0 0 20px
 
 		@media (max-width: 767px)
-			padding: 0 0 0 100px
+			padding: 0
 
 		h3
 			font-size: 18px

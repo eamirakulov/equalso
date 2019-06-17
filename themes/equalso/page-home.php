@@ -31,7 +31,7 @@
 			});
 		});
 	</script>
-	<div class="home-slider">
+	<div class="home-slider" id="home-slider">
 		<div class="wrap">
 			<?php
 			$args = array(
@@ -64,7 +64,7 @@
 							<div class="odd item">
 								<div class="row">
 									<div class="col-sm-6 img" style="background: url(<?php echo the_sub_field('image'); ?>) no-repeat center; background-size: cover;">
-										
+										<img class="visible-xs" src="<?php echo the_sub_field('image'); ?>">
 									</div>
 									<div class="col-sm-6">
 										<div class="inner">
@@ -78,7 +78,8 @@
 						<?php else : ?>
 							<div class="even item">
 								<div class="row">
-									<div class="col-sm-6 img visible-mobile" style="background: url(<?php echo the_sub_field('image'); ?>) no-repeat center; background-size: cover;">									</div>
+									<div class="col-sm-6 img visible-mobile" style="background: url(<?php echo the_sub_field('image'); ?>) no-repeat center; background-size: cover;">
+										<img class="visible-xs" src="<?php echo the_sub_field('image'); ?>"></div>
 									<div class="col-sm-6">
 										<div class="inner">
 											<h2><?php echo the_sub_field('title'); ?></h2>
