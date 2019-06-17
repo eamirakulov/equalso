@@ -140,7 +140,7 @@ header {
             height: 5px;
             border-radius: 15px;
             background: #DD4267; }
-        header .menu ul li:last-child:after {
+        header .menu ul li.menu-item-174:after {
           content: none !important; }
 
 .main-banner {
