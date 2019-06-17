@@ -8,7 +8,7 @@
 		</div>
 	</div>
 
-	<div class="about-intro">
+	<div class="about-intro" id="intro">
 		<div class="container">
 			<?php echo get_field('grey_section'); ?>
 		</div>

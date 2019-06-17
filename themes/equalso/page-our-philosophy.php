@@ -9,7 +9,7 @@
 		</div>
 	</div>
 
-	<div class="three">
+	<div class="three" id="intro">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">

@@ -31,7 +31,7 @@
 			});
 		});
 	</script>
-	<div class="home-slider" id="home-slider">
+	<div class="home-slider" id="intro">
 		<div class="wrap">
 			<?php
 			$args = array(
@@ -110,7 +110,7 @@
 		</div>
 	</div>
 
-	<div class="contact">
+	<div class="contact" id="contact">
 		<div class="inner">
 			<?php
 				while ( have_rows('contact_form') ) : the_row(); ?>
