@@ -140,6 +140,8 @@ header {
             height: 5px;
             border-radius: 15px;
             background: #DD4267; }
+        header .menu ul li:last-child:after {
+          content: none !important; }
 
 .main-banner {
   background: url(img/main.svg) no-repeat center center;
@@ -443,10 +445,6 @@ span.wpcf7-not-valid-tip {
   height: 5px;
   border-radius: 15px;
   background: #fff; }
-.our-philosophy_page header .menu ul li:last-child:after,
-.about-us_page header .menu ul li:last-child:after,
-.blog_page header .menu ul li:last-child:after {
-  content: none !important; }
 
 .single-post .main-banner .container {
   max-width: 850px; }
