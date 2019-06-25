@@ -91,6 +91,9 @@ header
 			top: 30px
 			z-index: 9999
 
+			&.close
+				right: 35px
+
 	.right
 		text-align: right
 
@@ -162,9 +165,11 @@ header
 .main-banner
 	background: url(img/main.svg) no-repeat center center
 	background-size: cover
+	height: 709px
 
 	@media(max-width: 767px)
 		background-size: initial
+		height: auto
 
 	h1
 		font-weight: 600
@@ -259,14 +264,22 @@ header
 			.img
 				margin-bottom: 35px
 		&.odd
+			.img
+				margin-right: 40px
+				@media (max-width: 767px)
+					margin-right: 0
 			.inner
 				padding-left: 28px
 				@media (max-width: 767px)
 					padding-left: 0
 
 		&.even
+			.img
+				margin-left: 120px
+				@media (max-width: 767px)
+					margin-left: 0
 			.inner
-				padding-right: 28px
+				padding-right: 0
 				@media (max-width: 767px)
 					padding-right: 0
 
@@ -313,6 +326,9 @@ header
 
 .contact
 	padding: 120px 0 100px 0
+
+	@media (max-width: 767px)
+		padding: 120px 0 20px 0
 	.inner
 		padding: 92px 278px
 		max-width: 1170px
@@ -323,7 +339,7 @@ header
 		@media (max-width: 1024px) and (orientation: portrait)
 			padding: 92px 15px
 		@media (max-width: 767px)
-			padding: 92px 15px
+			padding: 92px 15px 20px 15px
 			text-align: left
 			border-radius: 0
 
@@ -492,6 +508,9 @@ span.wpcf7-not-valid-tip
 				line-height: 58px
 				display: inline-block
 .blog_page
+	header
+		@media (max-width: 767px)
+			border-bottom: none
 	.blog-container
 		max-width: 877px
 		margin: 0 auto
@@ -551,7 +570,7 @@ span.wpcf7-not-valid-tip
 				border: none
 
 			.excerpt
-				margin: 30px 0 0 0
+				margin: 30px 0 0 3px
 
 .single-container
 	max-width: 877px
@@ -648,6 +667,7 @@ span.wpcf7-not-valid-tip
 .about-us_page
 	.main-banner
 		color: #fff
+		background-size: cover !important
 
 		@media (max-width: 767px)
 			background-size: cover !important
@@ -799,6 +819,7 @@ span.wpcf7-not-valid-tip
 				margin-bottom: 20px
 			@media (max-width: 767px)
 				border-radius: 0
+				padding: 50px 0
 		h3
 			font-size: 32px
 			font-weight: 600
@@ -1045,6 +1066,8 @@ span.wpcf7-not-valid-tip
 		color: $rose
 .footer-top
 	padding: 50px 0
+	@media (max-width: 767px)
+		padding: 0 0 20px 0
 	.subscribe-box
 		padding: 30px
 		background: #F9F9F9
@@ -1053,7 +1076,7 @@ span.wpcf7-not-valid-tip
 		font-size: 18px
 		@media (max-width: 767px)
 			background: none
-			margin-top: 142px
+			margin-top: 50px
 			padding: 0
 		input
 			margin-bottom: 0

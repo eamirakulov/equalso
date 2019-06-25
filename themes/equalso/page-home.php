@@ -1,8 +1,10 @@
 <?php get_header(); ?>
 	<?php if(have_posts()): the_post(); ?>
 		<div class="main-banner">
-			<div class="text">
-				<?php echo get_field('text'); ?>
+			<div class="container">
+				<div class="text">
+					<?php echo get_field('text'); ?>
+				</div>
 			</div>
 		</div>
 

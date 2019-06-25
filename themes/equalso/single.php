@@ -1,4 +1,11 @@
 <?php get_header(); ?>
+	<style type="text/css">
+		@media (max-width: 767px) {
+			header {
+				border-bottom: none;
+			}
+		}
+	</style>
 	<?php if(have_posts()): the_post(); ?>
 	<div class="single-post">
 	<div class="main-banner" style="background: url(<?php echo get_the_post_thumbnail_url(); ?>) no-repeat center center;background-size: cover;color: #fff;">
