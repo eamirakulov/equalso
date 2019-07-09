@@ -235,18 +235,23 @@ header {
     @media (max-width: 767px) {
       .mosaic .item .img {
         margin-bottom: 35px; } }
+    .mosaic .item.odd .col-sm-6 {
+      padding-left: 0; }
+      @media (max-width: 767px) {
+        .mosaic .item.odd .col-sm-6 {
+          padding-left: 15px; } }
     .mosaic .item.odd .img {
-      margin-right: 40px; }
+      margin-right: 60px; }
       @media (max-width: 767px) {
         .mosaic .item.odd .img {
           margin-right: 0; } }
-    .mosaic .item.odd .inner {
-      padding-left: 28px; }
+    .mosaic .item.even .col-sm-6 {
+      padding-left: 0; }
       @media (max-width: 767px) {
-        .mosaic .item.odd .inner {
-          padding-left: 0; } }
+        .mosaic .item.even .col-sm-6 {
+          padding-left: 15px; } }
     .mosaic .item.even .img {
-      margin-left: 120px; }
+      margin-left: 60px; }
       @media (max-width: 767px) {
         .mosaic .item.even .img {
           margin-left: 0; } }
